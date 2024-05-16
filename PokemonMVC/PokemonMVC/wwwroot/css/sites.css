@@ -1,0 +1,50 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+nav {
+    background-color: aliceblue;
+    margin-top: -8px;
+}
+.nav-item {
+    text-align: center;
+}
+.nav-item a {
+    display: inline-block;
+    background-color: aliceblue;
+    color: #fff; /* White color */
+    text-decoration: none;
+    font-size: 20px;
+}
+
+    .nav-item a:hover {
+        background-color: lightblue;
+        border-radius: 10px;
+    }
+.container-fluid a {
+    font-size: 20px;
+}
+h5 {
+    text-align: center;
+    font-family: 'Comic Sans MS';
+    background-color: lightblue;
+    color: black;
+}

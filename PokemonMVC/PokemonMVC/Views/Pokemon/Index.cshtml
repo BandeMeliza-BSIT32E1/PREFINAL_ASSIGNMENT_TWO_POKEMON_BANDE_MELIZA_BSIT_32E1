@@ -1,0 +1,89 @@
+﻿<style>
+    body {
+        background-color: whitesmoke;
+        font-family: 'Comic Sans MS';
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Style for the title */
+    h2 {
+        font-size: 50px;
+        margin-bottom: 15px;
+
+    }
+
+    /* Style for the list */
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap; /* Enable wrapping */
+        justify-content: space-between; /* Distribute items evenly */
+    }
+
+    /* Style for list items */
+    .line {
+        margin-bottom: 10px;
+        width: calc(50% - 10px); /* Two columns with margin between */
+    }
+
+    /* Style for links */
+    a {
+        text-decoration: none;
+        color: #007bff; /* Blue color, you can change it as per your preference */
+        font-size: 25px;
+    }
+
+    /* Style for pagination */
+    .pagination {
+        margin-top: 20px;
+    }
+
+        /* Style for pagination links */
+        .pagination a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px 10px;
+            background-color: darkblue; /* Blue color */
+            color: #fff; /* White color */
+            text-decoration: none;
+        }
+
+            /* Style for previous and next links */
+            .pagination a.prev {
+                margin-right: 20px;
+            }
+</style>
+
+
+@model IEnumerable<PokemonMVC.Models.Pokemon>
+@{
+    ViewBag.Title = "Pokemon List";
+}
+<h2>Pokemon List</h2>
+<ul>
+    @if (Model != null)
+    {
+        @foreach (var pokemon in Model)
+        {
+            <li class="line">
+                <a href="@Url.Action("Details", "Pokemon", new { name = pokemon.Name })">@pokemon.Name</a>
+            </li>
+        }
+    }
+    else
+    {
+        <li>No Pokemon found.</li>
+    }
+</ul>
+
+@if (ViewBag.Page > 1)
+{
+    <a href="@Url.Action("Index", new { page = ViewBag.Page - 1 })">Previous |</a>
+}
+<a href="@Url.Action("Index", new { page = ViewBag.Page + 1 })"> Next</a>
