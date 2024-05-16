@@ -1,32 +1,62 @@
 ﻿<style>
+    body {
+        background-color: whitesmoke;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Style for the title */
+    h2 {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+    /* Style for the list */
     ul {
         list-style-type: none;
         padding: 0;
+        display: flex;
+        flex-wrap: wrap; /* Enable wrapping */
+        justify-content: space-between; /* Distribute items evenly */
     }
 
+    /* Style for list items */
     li {
         margin-bottom: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
+        width: calc(50% - 10px); /* Two columns with margin between */
     }
 
-    /* Styles for the navigation links */
+    /* Style for links */
     a {
-        display: inline-block;
-        padding: 8px 16px;
         text-decoration: none;
-        color: #333;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background-color: #f9f9f9;
-        transition: background-color 0.3s ease;
+        color: #007bff; /* Blue color, you can change it as per your preference */
+        font-size: 20px;
     }
 
-        a:hover {
-            background-color: #ddd;
-        }
-</style>
+    /* Style for pagination */
+    .pagination {
+        margin-top: 20px;
+    }
 
+        /* Style for pagination links */
+        .pagination a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px 10px;
+            background-color: #007bff; /* Blue color */
+            color: #fff; /* White color */
+            text-decoration: none;
+        }
+
+            /* Style for previous and next links */
+            .pagination a.prev {
+                margin-right: 20px;
+            }
+</style>
 
 
 @model IEnumerable<PokemonMVC.Models.Pokemon>
