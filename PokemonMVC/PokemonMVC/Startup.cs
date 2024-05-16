@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Net.Http;
 
 namespace PokemonMVC
 {
@@ -20,7 +21,7 @@ namespace PokemonMVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddHttpClient(); // Add this line to register HttpClient
+            services.AddHttpClient(); // Add HttpClient registration here
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
