@@ -13,6 +13,7 @@
     h2 {
         font-size: 50px;
         margin-bottom: 15px;
+
     }
 
     /* Style for the list */
@@ -34,7 +35,7 @@
     a {
         text-decoration: none;
         color: #007bff; /* Blue color, you can change it as per your preference */
-        font-size: 20px;
+        font-size: 25px;
     }
 
     /* Style for pagination */
@@ -85,4 +86,4 @@
 {
     <a href="@Url.Action("Index", new { page = ViewBag.Page - 1 })">Previous</a>
 }
-<a href="@Url.Action("Index", new { page = ViewBag.Page + 1 })">Next</a>
+<a href="@Url.Action("Index", new { page = ViewBag.Page + 1 })">Next >></a>

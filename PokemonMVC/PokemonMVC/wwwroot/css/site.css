@@ -20,3 +20,20 @@ html {
 body {
   margin-bottom: 60px;
 }
+nav {
+    background-color: blanchedalmond;
+}
+
+.nav-item a.button {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: blanchedalmond;
+    color: #fff; /* White color */
+    text-decoration: none;
+    font-size: 25px;
+    margin-top: 5px;
+}
+
+    .nav-item a.button:hover {
+        background-color: burlywood; 
+    }
