@@ -22,18 +22,17 @@ body {
 }
 nav {
     background-color: aliceblue;
+    margin-top: -8px;
 }
 .nav-item {
     text-align: center;
-    margin-left: -200px;
 }
 .nav-item a {
     display: inline-block;
     background-color: aliceblue;
     color: #fff; /* White color */
     text-decoration: none;
-    font-size: 15px;
-    margin-top: 5px;
+    font-size: 20px;
 }
 
     .nav-item a:hover {
@@ -41,5 +40,11 @@ nav {
         border-radius: 10px;
     }
 .container-fluid a {
-    font-size: 25px;
+    font-size: 20px;
+}
+h5 {
+    text-align: center;
+    font-family: 'Comic Sans MS';
+    background-color: lightblue;
+    color: black;
 }

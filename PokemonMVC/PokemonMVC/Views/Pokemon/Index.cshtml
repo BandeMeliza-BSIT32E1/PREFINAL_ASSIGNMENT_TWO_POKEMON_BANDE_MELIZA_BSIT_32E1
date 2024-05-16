@@ -1,6 +1,7 @@
 ﻿<style>
     body {
         background-color: whitesmoke;
+        font-family: 'Comic Sans MS';
     }
 
     .container {
@@ -26,7 +27,7 @@
     }
 
     /* Style for list items */
-    li {
+    .line {
         margin-bottom: 10px;
         width: calc(50% - 10px); /* Two columns with margin between */
     }
@@ -64,14 +65,13 @@
 @{
     ViewBag.Title = "Pokemon List";
 }
-
 <h2>Pokemon List</h2>
 <ul>
     @if (Model != null)
     {
         @foreach (var pokemon in Model)
         {
-            <li>
+            <li class="line">
                 <a href="@Url.Action("Details", "Pokemon", new { name = pokemon.Name })">@pokemon.Name</a>
             </li>
         }
