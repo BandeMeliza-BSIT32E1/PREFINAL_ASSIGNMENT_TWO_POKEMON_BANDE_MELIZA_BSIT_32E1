@@ -1,17 +1,18 @@
-﻿using System.Net.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PokemonMVC.Models;
 using Newtonsoft.Json.Linq;
 
 namespace PokemonMVC.Controllers
 {
+
     public class PokemonController : Controller
     {
         private readonly HttpClient _httpClient;
 
-        public PokemonController(HttpClient httpClient)
+        public PokemonController()
         {
-            _httpClient = httpClient;
+            _httpClient = new HttpClient();
+            _httpClient.BaseAddress = new Uri("https://pokeapi.co/api/v2/");
         }
 
         public async Task<IActionResult> Index(int page = 1)
