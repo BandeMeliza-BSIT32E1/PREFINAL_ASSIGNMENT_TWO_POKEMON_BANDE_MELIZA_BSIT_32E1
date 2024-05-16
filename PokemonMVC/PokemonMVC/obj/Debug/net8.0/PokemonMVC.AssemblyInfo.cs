@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PokemonMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+58dcfe8681737c97f0bd2d1d74235139614408fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("PokemonMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PokemonMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
