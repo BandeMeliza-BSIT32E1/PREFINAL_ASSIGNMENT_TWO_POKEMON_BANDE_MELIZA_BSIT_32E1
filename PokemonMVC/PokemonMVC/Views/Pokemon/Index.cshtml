@@ -48,7 +48,7 @@
             display: inline-block;
             margin-right: 10px;
             padding: 5px 10px;
-            background-color: #007bff; /* Blue color */
+            background-color: darkblue; /* Blue color */
             color: #fff; /* White color */
             text-decoration: none;
         }
@@ -84,6 +84,6 @@
 
 @if (ViewBag.Page > 1)
 {
-    <a href="@Url.Action("Index", new { page = ViewBag.Page - 1 })">Previous</a>
+    <a href="@Url.Action("Index", new { page = ViewBag.Page - 1 })">Previous |</a>
 }
-<a href="@Url.Action("Index", new { page = ViewBag.Page + 1 })">Next >></a>
+<a href="@Url.Action("Index", new { page = ViewBag.Page + 1 })"> Next</a>
